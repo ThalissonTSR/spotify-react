@@ -27,114 +27,48 @@ const Main = () => {
                 <div className="offer__scroll-container">
                     <div className="offer__list">
                         <section className="offer__list-item">
-                            <a href="" className="cards">
-                                <div className="cards card1">
-                                    <img src={Playlist1} alt="" />
-                                    <span>Boas festas</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card2">
-                                    <img src={Playlist2} alt="" />
-                                    <span>Feitos para você</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card3">
-                                    <img src={Playlist3} alt="" />
-                                    <span>Lançamentos</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card4">
-                                    <img src={Playlist4} alt="" />
-                                    <span>Creators</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card5">
-                                    <img src={Playlist5} alt="" />
-                                    <span>Para treinar</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card6">
-                                    <img src={Playlist6} alt="" />
-                                    <span>Podcasts</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card7">
-                                    <img src={Playlist7} alt="" />
-                                    <span>Sertanejo</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card8">
-                                    <img src={Playlist8} alt="" />
-                                    <span>Samba e pagode</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card9">
-                                    <img src={Playlist9} alt="" />
-                                    <span>Funk</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card10">
-                                    <img src={Playlist10} alt="" />
-                                    <span>MPB</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card11">
-                                    <img src={Playlist11} alt="" />
-                                    <span>Rock</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card12">
-                                    <img src={Playlist12} alt="" />
-                                    <span>Hip Hop</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card13">
-                                    <img src={Playlist13} alt="" />
-                                    <span>Indie</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card14">
-                                    <img src={Playlist14} alt="" />
-                                    <span>Relax</span>
-                                </div>
-                            </a>
-                            <a href="" className="cards">
-                                <div className="cards card15">
-                                    <img src={Playlist15} alt="" />
-                                    <span>Música Latina</span>
-                                </div>
-                            </a>
+                            {[ // Lista de playlists
+                                { img: Playlist1, title: "Boas festas" },
+                                { img: Playlist2, title: "Feitos para você" },
+                                { img: Playlist3, title: "Lançamentos" },
+                                { img: Playlist4, title: "Creators" },
+                                { img: Playlist5, title: "Para treinar" },
+                                { img: Playlist6, title: "Podcasts" },
+                                { img: Playlist7, title: "Sertanejo" },
+                                { img: Playlist8, title: "Samba e pagode" },
+                                { img: Playlist9, title: "Funk" },
+                                { img: Playlist10, title: "MPB" },
+                                { img: Playlist11, title: "Rock" },
+                                { img: Playlist12, title: "Hip Hop" },
+                                { img: Playlist13, title: "Indie" },
+                                { img: Playlist14, title: "Relax" },
+                                { img: Playlist15, title: "Música Latina" },
+                            ].map((playlist, index) => (
+                                <button key={index} className="cards">
+                                    <div className={`cards card${index + 1}`}>
+                                        <img src={playlist.img} alt={playlist.title} />
+                                        <span>{playlist.title}</span>
+                                    </div>
+                                </button>
+                            ))}
                         </section>
                     </div>
                 </div>
             </div>
             <div id="result-artist" className="hidden">
                 <div className="grid-container">
-                    <div className="artist-card" id="">
+                    <div className="artist-card">
                         <div className="card-img">
-                            <img id="artist-img" className="artist-img" />
+                            <img id="artist-img" className="artist-img" alt="Artista" />
                             <div className="play">
                                 <span className="fa fa-solid fa-play"></span>
                             </div>
                         </div>
                         <div className="card-text">
-                            <a title="Foo Fighters" className="vst" href="">
+                            <button className="vst">
                                 <span className="artist-name" id="artist-name"></span>
                                 <span className="artist-categorie">Artista</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
