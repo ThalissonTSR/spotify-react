@@ -125,7 +125,7 @@
 .section-playlist__content .section-playlist__button{
     display: flex;
     justify-content: center;
-    background-color: #FFF;
+    background-color:rgb(175, 174, 174);
     color:#000;
     border-radius: 20px;
     font-size: 12px;
